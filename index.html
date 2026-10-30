@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YeaPlanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="images/Logo.png" alt="logo" class="logo">
+    </header>
+    <main class="tasks">
+            <form class="task-form">
+                <input type="text" name="task" required
+                placeholder="Введите задачу" class="task-form__input">
+                <button type="submit" class="task-form__button">
+                    Добавить
+                </button>
+            </form>
+            <div class="task-content">
+                <div class="task-filters">
+                    <p class="task-filter__text">Фильтр:</p>
+                    <button class="task-filter active" data-filter="all">Все</button>
+                    <button class="task-filter" data-filter="active">Активные</button>
+                    <button class="task-filter" data-filter="completed">Завершённые</button>
+                </div>
+                <div class="task-counters">
+                    <div class="task-counters__item">
+                        <p class="task-counters__label">Всего задач</p>
+                        <p class="task-counters__value" id="countall">0</p>
+                    </div>
+                    <div class="task-counters__item">
+                        <p class="task-counters__label">Завершенные</p>
+                        <p class="task-counters__value" id="countdone">0</p>
+                    </div>
+                </div>
+                <div class="task-list">
+                    <div class="task-list-empty">
+                        <img src="images/Clipboard.png" alt="">
+                        <p><b>У Вас еще нет зарегистрированных задач</b></p>
+                        <p>Создавайте задачи и организуйте свои дела</p>
+                    </div>
+                    <ul class="task-list__items">
+                    </ul>
+                </div>
+            </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
